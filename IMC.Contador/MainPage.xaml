@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IMC.Contador.MainPage"
+             Title="SALUD"
+             Background="#E8F0F2">
+    
+    
+    <VerticalStackLayout
+        Margin="20,24"
+        Spacing="25">
+
+
+        <Label
+            Text="Calculadora de IMC"
+            FontFamily="Segoe UI"
+            TextColor="#1B3A57"
+            FontSize="32"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"/>
+
+        <Entry
+            x:Name="PesoEntry"
+            Placeholder="Ingresa tu peso en Kg"
+            Keyboard="Numeric"
+            FontSize="18"
+            TextColor="#1B3A57"
+            BackgroundColor="#FFFFFF"
+            Margin="0,10"
+            HeightRequest="50"/>
+
+        <Entry
+            x:Name="EstaturaEntry"
+            Placeholder="Ingresa tu estatura en metros"
+            Keyboard="Numeric"
+            FontSize="18"
+            TextColor="#1B3A57"
+            BackgroundColor="#FFFFFF"
+            Margin="0,10"
+            HeightRequest="50"/>
+
+        <HorizontalStackLayout 
+            Spacing="20"
+            HorizontalOptions="Center">
+
+            <Button
+                Text="Calcular IMC"
+                BackgroundColor="#1B3A57"
+                TextColor="White"
+                CornerRadius="10"
+                WidthRequest="140"
+                HeightRequest="50"
+                FontAttributes="Bold"
+                Clicked="CalcularButton_Clicked"/>
+
+            <Button
+                Text="Limpiar"
+                BackgroundColor="#F2A541"
+                 TextColor="White"
+                 CornerRadius="10"
+                 WidthRequest="140"
+                 HeightRequest="50"
+                 FontAttributes="Bold"
+                 Clicked="LimpiarButton_Clicked"/>
+
+        </HorizontalStackLayout>
+
+        <Border
+            HeightRequest="90"
+            BackgroundColor="#FFFFFF"
+            StrokeShape="RoundRectangle 15"
+            StrokeThickness="1"
+            Margin="0,20"
+            Padding="15">
+
+            <Label
+                x:Name="ResultadoLabel"
+                Text=""
+                FontSize="18"
+                FontAttributes="Bold"
+                FontFamily="Segoe UI"
+                TextColor="#1B3A57"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+
+        </Border>
+ 
+    </VerticalStackLayout>
+
+</ContentPage>
